@@ -15,7 +15,7 @@ router.get('/new', function(req, res, next) {
 router.post('/new', function(req, res, next) {
   var nome = req.body.nome;
   var idade = req.body.idade;
-  res.redirect('/new?nome=' + nome);
+  require("../db").saveCustomer(nome, idade, function (){res.redirect('/');})  
 });
 
 module.exports = router;

@@ -7,5 +7,10 @@
   <body>
     <h1><%= title %></h1>
     <p>Welcome to <%= title %></p>
+    <ul>
+      <% customers.forEach(function(customers){ %>
+        <li><%= customers.nome %> <%= customers.idade %></li>
+      <% }) %>
+    </ul>
   </body>
 </html>
